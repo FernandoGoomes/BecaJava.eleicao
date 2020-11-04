@@ -23,6 +23,9 @@ public class Voto {
 	@JoinColumn(name = "CandidatoId")
 	private Candidato Candidato;
 	
+	@ManyToOne
+	@JoinColumn(name = "ZonaEleitoralId")
+	private ZonaEleitoral ZonaEleitoral;
 		
 	public int getId() {
 		return Id;
@@ -46,6 +49,14 @@ public class Voto {
 
 	public void setCandidato(Candidato candidato) {
 		Candidato = candidato;
+	}
+
+	public ZonaEleitoral getZonaEleitoral() {
+		return ZonaEleitoral;
+	}
+
+	public void setZonaEleitoral(ZonaEleitoral zonaEleitoral) {
+		ZonaEleitoral = zonaEleitoral;
 	}
 	
 	
